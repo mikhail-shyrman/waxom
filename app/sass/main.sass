@@ -1,0 +1,56 @@
+@import "vars"
+@import "fonts"
+
+
+body
+    font-family: $mont
+    font-weight: 300
+    font-size: 14px
+    color: $text_color
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+    a
+        color: inherit
+        &:hover, &:focus, &:active, &:visited
+            text-decoration: none
+            color: inherit
+        
+.header
+    background-image: url('../img/bg_header.jpg')
+    min-height: 1024px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top center
+    .top_header
+        padding-top: 40px
+        .logo
+            float: left
+        .menu
+            float: right
+            color: #fff
+            li
+                display: inline-block
+                line-height: 56px
+            li+li
+                padding-left: 25px
+                &:nth-child(9)
+                    width: 18px
+                    height: 24px
+                    background: url('../img/css_sprites.png') -162px -207px
+                    &:hover
+                       background: url('../img/css_sprites.png') -200px -207px
+                &:last-child
+                    width: 24px
+                    height: 24px
+                    background: url('../img/css_sprites.png') -118px -207px
+                    &:hover
+                        background: url('../img/css_sprites.png') -74px -207px
+            a:hover
+                color: $top_color
+            
+                
+    
+
+@import "media"
