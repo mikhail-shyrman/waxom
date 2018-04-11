@@ -1,7 +1,54 @@
 $rw: 'Raleway', sans-serif
 $mont: 'Montserrat', sans-serif
 $roboto: 'Roboto', sans-serif
-$icon: 'iconmoon'
+$icon: 'icomoon'
 $top_color: #c7b299
 $h_color: #555555
 $text_color: #8c8c8c
+
+%icon_cart
+    width: 18px
+    height: 24px
+    background-position: -162px -207px
+    background-image: url('../img/css_sprites.png')
+    &:hover
+        background: url('../img/css_sprites.png')
+        background-position: -200px -207px
+
+%icon_searh
+    width: 24px
+    height: 24px
+    background-position: -118px -207px
+    background-image: url('../img/css_sprites.png')
+    &:hover
+        background-image: url('../img/css_sprites.png')
+        background-position: -74px -207px
+
+%btn_default
+    color: #fff
+    padding: 16px 0
+    width: 170px
+    background-color: #998675
+    border-bottom: 3px solid #736357
+    border-radius: 4px
+    font-family: $rw
+    font-weight: 800
+    text-transform: uppercase
+    font-size: 14px
+    display: inline-block
+    outline: none
+    
+%h4_default
+    font-family: $rw
+    font-size: 30px
+    font-weight: 600
+    color: $h_color
+    margin: 0
+    padding-top: 75px
+
+%p_default
+    font-size: 16px
+    max-width: 725px
+    margin: 0 auto
+    line-height: 28px
+    padding-top: 15px
