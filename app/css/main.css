@@ -38,7 +38,7 @@
   outline: none;
 }
 
-.realization h4, .portfolio h4 {
+.realization h4, .portfolio h4, .mobile .information h4 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -47,12 +47,36 @@
   padding-top: 75px;
 }
 
-.realization p, .portfolio p {
+.realization p, .portfolio p, .mobile .information p {
   font-size: 16px;
   max-width: 725px;
   margin: 0 auto;
   line-height: 28px;
   padding-top: 15px;
+}
+
+.portfolio .work .tools li:first-child a {
+  width: 26px;
+  height: 25px;
+  background-position: -10px -10px;
+  background-image: url("../img/css_sprites_work.png");
+}
+
+.portfolio .work .tools li:first-child a:hover {
+  background: url("../img/css_sprites_work.png");
+  background-position: -56px -10px;
+}
+
+.portfolio .work .tools li:last-child a {
+  width: 26px;
+  height: 25px;
+  background-position: -10px -55px;
+  background-image: url("../img/css_sprites_work.png");
+}
+
+.portfolio .work .tools li:last-child a:hover {
+  background: url("../img/css_sprites_work.png");
+  background-position: -56px -55px;
 }
 
 @font-face {
@@ -434,7 +458,40 @@ body a:hover, body a:focus, body a:active, body a:visited {
   border: none;
 }
 
-.portfolio .arrow {
+.portfolio .work {
+  cursor: pointer;
+}
+
+.portfolio .work .tools {
+  width: 370px;
+  height: 237px;
+  background-color: rgba(17, 17, 17, 0.7);
+  position: absolute;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.portfolio .work .tools li {
+  display: inline-block;
+  padding-top: 105px;
+}
+
+.portfolio .work .tools li:first-child a {
+  display: inline-block;
+}
+
+.portfolio .work .tools li:last-child {
+  padding-left: 30px;
+}
+
+.portfolio .work .tools li:last-child a {
+  display: inline-block;
+}
+
+.portfolio .work .arrow {
   width: 0px;
   height: 0px;
   border: 20px solid transparent;
@@ -443,35 +500,240 @@ body a:hover, body a:focus, body a:active, body a:visited {
   top: 218px;
   left: 40px;
   position: absolute;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
-.portfolio .text_box {
+.portfolio .work .text_box {
   background-color: #fbfaf8;
   margin-bottom: 30px;
   text-align: left;
   padding-left: 25px;
   padding-top: 25px;
   height: 100px;
-  max-width: 370px;
+  width: 370px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
-.portfolio .text_box h5 {
+.portfolio .work .text_box h5 {
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #c7b299;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
-.portfolio .text_box p {
+.portfolio .work .text_box p {
   padding: 0;
   color: #d1d1d1;
   font-size: 14px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.portfolio .work:hover .tools {
+  opacity: 1;
+}
+
+.portfolio .work:hover .arrow {
+  border-bottom-color: #362f2d;
+}
+
+.portfolio .work:hover .text_box {
+  background-color: #362f2d;
+}
+
+.portfolio .work:hover .text_box h5 {
+  color: #fff;
+}
+
+.portfolio .work:hover .text_box p {
+  color: #c7b299;
 }
 
 .portfolio .btn_more {
   margin-top: 10px;
   margin-bottom: 80px;
+}
+
+.video {
+  background-image: url("../img/bg_video.jpg");
+  min-height: 705px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: top center;
+  text-align: center;
+}
+
+.video .btn_play {
+  padding-top: 210px;
+  padding-bottom: 40px;
+}
+
+.video .btn_play a {
+  outline: none;
+}
+
+.video h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.video p {
+  font-size: 16px;
+  max-width: 561px;
+  margin: 0 auto;
+  line-height: 28px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.video span {
+  display: inline-block;
+  padding-top: 40px;
+  font-weight: 500;
+  color: #c7b299;
+}
+
+.mobile {
+  background-image: url("../img/bg_mobile.png");
+  min-height: 695px;
+  background-repeat: no-repeat;
+  -webkit-background-size: center center;
+          background-size: center;
+  background-position: bottom center;
+  background-color: #fbfaf8;
+}
+
+.mobile .information {
+  padding-top: 120px;
+}
+
+.mobile .information ul {
+  padding-top: 30px;
+  padding-left: 100px;
+  font-size: 16px;
+}
+
+.mobile .information ul li {
+  line-height: 32px;
+  position: relative;
+}
+
+.mobile .information ul li::before {
+  content: "\f105";
+  font-family: "icomoon";
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background-color: #c7b299;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding-left: 9px;
+  line-height: 20px;
+  position: absolute;
+  left: -45px;
+  top: 6px;
+}
+
+.counters {
+  min-height: 300px;
+  background: #372720;
+  background: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background: -webkit-linear-gradient(left, #211b19, #4e3427);
+  background: -o-linear-gradient(left, #211b19, #4e3427);
+  background: linear-gradient(to right, #211b19, #4e3427);
+  text-align: center;
+}
+
+.counters h5 {
+  font-weight: 200;
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  padding-top: 130px;
+}
+
+.counters h5::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/css_sprites.png);
+  background-position: -148px -74px;
+  width: 44px;
+  height: 44px;
+  top: 70px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.counters p {
+  color: #c7b299;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 500;
+}
+
+.counters .line {
+  background-color: #fff;
+  width: 30px;
+  height: 2px;
+  display: inline-block;
+}
+
+.counters .col-md-2:nth-child(2) h5::before {
+  background-position: -148px -10px;
+  width: 48px;
+  height: 44px;
+}
+
+.counters .col-md-2:nth-child(3) h5::before {
+  background-position: -138px -143px;
+  width: 44px;
+  height: 44px;
+}
+
+.counters .col-md-2:nth-child(4) h5::before {
+  background-position: -84px -79px;
+  width: 44px;
+  height: 44px;
+}
+
+.counters .col-md-2:last-child h5::before {
+  background-position: -10px -79px;
+  width: 54px;
+  height: 44px;
+}
+
+.mfp-wrap .mfp-content {
+  width: 1000px;
+  height: 510px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#iframe {
+  width: 1000px;
+  height: 510px;
 }
 
 .header .top_header .menu li + li:nth-child(9) a {
@@ -514,7 +776,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
   outline: none;
 }
 
-.realization h4, .portfolio h4 {
+.realization h4, .portfolio h4, .mobile .information h4 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -523,12 +785,36 @@ body a:hover, body a:focus, body a:active, body a:visited {
   padding-top: 75px;
 }
 
-.realization p, .portfolio p {
+.realization p, .portfolio p, .mobile .information p {
   font-size: 16px;
   max-width: 725px;
   margin: 0 auto;
   line-height: 28px;
   padding-top: 15px;
+}
+
+.portfolio .work .tools li:first-child a {
+  width: 26px;
+  height: 25px;
+  background-position: -10px -10px;
+  background-image: url("../img/css_sprites_work.png");
+}
+
+.portfolio .work .tools li:first-child a:hover {
+  background: url("../img/css_sprites_work.png");
+  background-position: -56px -10px;
+}
+
+.portfolio .work .tools li:last-child a {
+  width: 26px;
+  height: 25px;
+  background-position: -10px -55px;
+  background-image: url("../img/css_sprites_work.png");
+}
+
+.portfolio .work .tools li:last-child a:hover {
+  background: url("../img/css_sprites_work.png");
+  background-position: -56px -55px;
 }
 
 /*==========    Desktop First    ==========*/

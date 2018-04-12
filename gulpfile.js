@@ -34,6 +34,7 @@ gulp.task('browser-sync', function(){
 
 gulp.task('script', function(){
     return gulp.src(['app/libs/mixitup/dist/mixitup.js',
+                     'app/libs/magnific-popup/dist/jquery.magnific-popup.js',
                      'app/libs/slick-carousel/slick/slick.js'])
     .pipe(concat('libs.min.js'))
     .pipe(uglifyjs())
