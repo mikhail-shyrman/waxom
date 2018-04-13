@@ -1,14 +1,43 @@
 $(function(){
-        $('.slick_slider').slick({
+    $('.slick_slider').slick({
         slidesToShow: 1,
         dots: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next')
     });
-    
+
+    $('.post_slider').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        prevArrow: $('.post_prev'),
+        nextArrow: $('.post_next'),
+//        responsive: [
+//            {
+//                breakpoint: 768,
+//                settings: {
+//                    arrows: false,
+//                    centerMode: true,
+//                    centerPadding: '40px',
+//                    slidesToShow: 3
+//                }
+//            },
+//            {
+//                breakpoint: 480,
+//                settings: {
+//                    arrows: false,
+//                    centerMode: true,
+//                    centerPadding: '40px',
+//                    slidesToShow: 1
+//                }
+//            }
+//        ]
+
+    });
+
     var mixer = mixitup('.mixer');
-    
-        $('.popup-with-form').magnificPopup({
+
+    $('.popup-with-form').magnificPopup({
         type: 'inline',
         preloader: false,
         focus: '#name',

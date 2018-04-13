@@ -38,7 +38,7 @@
   outline: none;
 }
 
-.realization h4, .portfolio h4, .mobile .information h4 {
+.realization h4, .portfolio h4, .mobile .information h4, .post h4 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -47,7 +47,7 @@
   padding-top: 75px;
 }
 
-.realization p, .portfolio p, .mobile .information p {
+.realization p, .portfolio p, .mobile .information p, .post p {
   font-size: 16px;
   max-width: 725px;
   margin: 0 auto;
@@ -123,6 +123,10 @@
 
 .icon-angle-up:before {
   content: "\f106";
+}
+
+.icon-caret-right:before {
+  content: "\f0da";
 }
 
 body {
@@ -232,8 +236,6 @@ body a:hover, body a:focus, body a:active, body a:visited {
 
 .header .header_content .prev,
 .header .header_content .next {
-  width: 40px;
-  height: 40px;
   color: #a3a2a0;
   cursor: pointer;
   font-size: 50px;
@@ -718,6 +720,171 @@ body a:hover, body a:focus, body a:active, body a:visited {
   height: 44px;
 }
 
+.post {
+  text-align: center;
+}
+
+.post .post_slider {
+  text-align: left;
+  padding-top: 25px;
+}
+
+.post .post_slider .slide_box img {
+  position: relative;
+}
+
+.post .post_slider .slide_box .date {
+  position: absolute;
+  top: 20px;
+  padding-left: 20px;
+}
+
+.post .post_slider .slide_box .date .day {
+  font-size: 24px;
+  color: #fff;
+  background-color: #363636;
+  display: inline-block;
+  padding: 1px 10px;
+  width: 50px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+          border-radius: 4px 4px 0px 0px;
+  position: absolute;
+  top: 0;
+}
+
+.post .post_slider .slide_box .date .month {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  padding: 4px 14px;
+  width: 50px;
+  background-color: #252525;
+  display: inline-block;
+  -webkit-border-radius: 0px 0px 4px 4px;
+          border-radius: 0px 0px 4px 4px;
+  position: absolute;
+  top: 36px;
+}
+
+.post .post_slider .slide_box .text_box_slide {
+  border: 1px solid #f8f8f8;
+  width: 370px;
+  padding: 22px 28px 25px;
+}
+
+.post .post_slider .slide_box .text_box_slide h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #555555;
+  margin: 0;
+}
+
+.post .post_slider .slide_box .text_box_slide span {
+  display: inline-block;
+  line-height: 22px;
+}
+
+.post .post_slider .slide_box .link_more {
+  color: #c7b299;
+  padding-top: 20px;
+  font-weight: 400;
+  position: relative;
+}
+
+.post .post_slider .slide_box .link_more::after {
+  content: "\f0da";
+  font-family: "icomoon";
+  position: absolute;
+  top: 21px;
+  left: 85px;
+}
+
+.post .post_slider .slick-center .dark {
+  width: 370px;
+  height: 220px;
+  background-color: rgba(17, 17, 17, 0.7);
+  position: absolute;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.post .post_slider .slick-center .text_box_slide {
+  background-color: #362f2d;
+  border: 1px solid #362f2d;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.post .post_slider .slick-center .text_box_slide h3 {
+  color: #c7b299;
+}
+
+.post .post_slider .slick-center .text_box_slide span {
+  color: #fff;
+}
+
+.post .post_slider .slick-center .date .day {
+  background-color: #c7b299;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.post .post_slider .slick-center .date .month {
+  background-color: #a48d72;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.post .post_prev,
+.post .post_next {
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #d7d7d7;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  color: #d7d7d7;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  margin: 40px 5px 80px;
+}
+
+.post .post_prev:hover,
+.post .post_next:hover {
+  border: 1px solid #d3c1ad;
+  color: #d3c1ad;
+}
+
+.partners {
+  background-image: url("../img/bg_partners.jpg");
+  min-height: 490px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: top center;
+}
+
+.partners .partner_logo {
+  text-align: center;
+  line-height: 490px;
+}
+
+.about {
+  background-color: #191919;
+}
+
 .mfp-wrap .mfp-content {
   width: 1000px;
   height: 510px;
@@ -776,7 +943,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
   outline: none;
 }
 
-.realization h4, .portfolio h4, .mobile .information h4 {
+.realization h4, .portfolio h4, .mobile .information h4, .post h4 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 600;
@@ -785,7 +952,7 @@ body a:hover, body a:focus, body a:active, body a:visited {
   padding-top: 75px;
 }
 
-.realization p, .portfolio p, .mobile .information p {
+.realization p, .portfolio p, .mobile .information p, .post p {
   font-size: 16px;
   max-width: 725px;
   margin: 0 auto;

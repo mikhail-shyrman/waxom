@@ -76,8 +76,6 @@ body
                         @extend %btn_default
         .prev,
         .next
-            width: 40px
-            height: 40px
             color: #a3a2a0
             cursor: pointer
             font-size: 50px
@@ -448,6 +446,127 @@ body
                 width: 54px
                 height: 44px
                 
+.post
+    text-align: center
+    h4
+        @extend %h4_default
+    p
+        @extend %p_default
+    .post_slider
+        text-align: left
+        padding-top: 25px
+        .slide_box
+            img
+                position: relative
+            .date
+                position: absolute
+                top: 20px
+                padding-left: 20px
+                .day
+                    font-size: 24px
+                    color: #fff
+                    background-color: #363636
+                    display: inline-block
+                    padding: 1px 10px
+                    width: 50px
+                    
+                    border-radius: 4px 4px 0px 0px
+                    position: absolute
+                    top: 0
+                .month
+                    font-family: $roboto
+                    font-size: 12px
+                    font-weight: 400
+                    color: #fff
+                    padding: 4px 14px
+                    width: 50px
+                    background-color: #252525
+                    display: inline-block
+                    border-radius: 0px 0px 4px 4px
+                    position: absolute
+                    top: 36px
+            .text_box_slide
+                border: 1px solid #f8f8f8
+                width: 370px
+                padding: 22px 28px 25px
+                h3
+                    font-family: $rw
+                    font-size: 20px
+                    font-weight: 500
+                    color: $h_color
+                    margin: 0
+                span
+                    display: inline-block
+                    line-height: 22px
+            .link_more
+                color: $top_color
+                padding-top: 20px
+                font-weight: 400
+                position: relative
+                &::after
+                    content: "\f0da"
+                    font-family: $icon
+                    position: absolute
+                    top: 21px
+                    left: 85px
+                
+        .slick-center
+                .dark
+                    width: 370px
+                    height: 220px
+                    background-color: rgba( 17, 17, 17, 0.7)
+                    position: absolute
+                    top: 0
+                    transition: all .3s ease
+                .text_box_slide
+                    background-color: #362f2d
+                    border: 1px solid #362f2d
+                    transition: all .3s ease
+                    h3
+                        color: $top_color
+                    span
+                        color: #fff
+                .date
+                    .day
+                        background-color: $top_color
+                        transition: all .3s ease
+                    .month
+                        background-color: #a48d72
+                        transition: all .3s ease
+    .post_prev,
+    .post_next
+        width: 22px
+        height: 22px
+        border-radius: 50%
+        border: 1px solid #d7d7d7
+        font-size: 18px
+        line-height: 20px
+        text-align: center
+        display: inline-block
+        color: #d7d7d7
+        cursor: pointer
+        transition: all .3s
+        margin: 40px 5px 80px
+        &:hover
+            border: 1px solid #d3c1ad
+            color: #d3c1ad
+        
+.partners
+    background-image: url('../img/bg_partners.jpg')
+    min-height: 490px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top center
+    .partner_logo
+        text-align: center
+        line-height: 490px
+        
+.about
+    background-color: #191919
+        
+                    
+                    
+            
     
 
             
