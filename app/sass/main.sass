@@ -487,6 +487,7 @@ body
                     top: 36px
             .text_box_slide
                 border: 1px solid #f8f8f8
+                background-color: #fff
                 width: 370px
                 padding: 22px 28px 25px
                 h3
@@ -502,13 +503,7 @@ body
                 color: $top_color
                 padding-top: 20px
                 font-weight: 400
-                position: relative
-                &::after
-                    content: "\f0da"
-                    font-family: $icon
-                    position: absolute
-                    top: 21px
-                    left: 85px
+                @extend %link_more
                 
         .slick-center
                 .dark
@@ -563,13 +558,102 @@ body
         
 .about
     background-color: #191919
-        
-                    
-                    
-            
-    
+    color: $h_color
+    padding-bottom: 40px
+    .logo
+        padding-top: 80px
+    .about_text
+        padding-top: 28px
+        line-height: 24px
+        &:hover
+            color: $top_color
+            transition: all .3s
+    .link_more
+        padding-top: 20px
+        font-weight: 400
+        color: #d1d1d1
+        @extend %link_more
+        &:hover
+            transition: all .3s
+            color: $top_color
+    h4
+        font-family: $rw
+        font-weight: 700
+        font-size: 24px
+        color: #fff
+        margin: 0
+        padding-top: 98px
+        padding-bottom: 20px
+    .text,
+    .text_last
+        line-height: 20px
+        padding-bottom: 20px
+        margin-bottom: 15px
+        p
+            margin: 2px 0
+            color: #363636
+            font-size: 12px
+        span
+            a
+                color: #00bff3
+        a
+            color: #959595
+        &:hover
+            color: $top_color
+            transition: all .3s
+            p
+                transition: all .3s
+                color: #fff
+    .text
+        border-bottom: 1px solid #252525
+    .widget
+        padding-top: 2px
+        img
+            margin: 2px 1px
 
-            
+.footer
+    font-size: 13px
+    color: $h_color
+    height: 110px
+    line-height: 110px
+    background-color: #111
+    span
+        color: #959595
+    .copi
+        float: left
+        ul
+            li
+                display: inline-block
+                position: relative
+                &::after
+                    content: "|"
+                    color: #252525
+                    position: absolute
+                    right: -15px
+                &:last-child
+                    &::after
+                        content: none
+                a
+                    &:hover
+                        color: $top_color
+                        transition: all .3s
+            li+li
+                padding-left: 20px
+    .devop
+        float: right
+        ul
+            li
+                display: inline-block
+                position: relative
+                &:first-child
+                    &::after
+                        content: "|"
+                        color: #252525
+                        position: absolute
+                        right: -15px
+            li+li
+                padding-left: 20px
+       
 .mfp-wrap .mfp-content
     width: 1000px
     height: 510px
@@ -584,7 +668,35 @@ body
     width: 1000px
     height: 510px
         
+#btn_top
+    position: fixed
+    bottom: 35px
+    right: 35px
+    z-index: 25
+    a
+        opacity: .7
+        text-align: center
+        display: inline-block
+        width: 30px
+        height: 30px
+        border: 3px solid $top_color
+        border-radius: 50%
+        position: relative
+        &::before
+            content: "\f106"
+            font-family: $icon
+            font-size: 29px
+            color: $top_color
+            position: absolute
+            top: -10px
+            left: 3px
+        &:hover
+            opacity: 1
+            transition: all .3s
+
+            
         
     
 
+    
 @import "media"
