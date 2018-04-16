@@ -46,6 +46,14 @@ body
                         @extend %icon_searh
             a:hover
                 color: $top_color
+        .btn_menu
+            display: none
+            border: none
+            background-color: transparent
+            color: #fff
+            outline: none
+            font-size: 25px
+            padding-top: 15px
     .header_content
         padding-top: 270px
         .btn_position
@@ -225,9 +233,12 @@ body
 .portfolio
     text-align: center
     .mixer
-        img
+        .photo
             position: relative
-            display: inline-block
+            width: 370px
+            height: 237px
+            img
+                display: inline-block
     h4
         @extend %h4_default
     p
@@ -254,8 +265,8 @@ body
     .work
         cursor: pointer
         .tools
-            width: 370px
-            height: 237px
+            width: 100%
+            height: 100%
             background-color: rgba( 17, 17, 17, 0.7)
             position: absolute
             top: 0
